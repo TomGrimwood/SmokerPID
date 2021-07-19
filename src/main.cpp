@@ -3,7 +3,7 @@
 
 MenuEntry tempDir("Temp Values");
 
-MenuEntry s_tempDir1("M_PROBE TEMP");
+ProbeEntry s_tempDir1("M_PROBE TEMP");
 MenuEntry s_tempDir2("S_PROBE TEMP");
 
 MenuEntry confDir("Configuration");
@@ -83,10 +83,15 @@ void loop()
     break;
 
   case RIGHT:
+  if (test.theCurrent->nexts[test.theCurrent->index]->numberOfEntries != 0)
+  {
     test.theCurrent = test.theCurrent->nexts[test.theCurrent->index];
     test.setIndex(0);
     test.dirBrowser(0);
     delay(400);
+  }
+  
+
     break;
 
   case LEFT:

@@ -33,7 +33,7 @@ public:
   
   MenuEntry(String name = "Unitialised");
   void addSub(MenuEntry *directory);
-  String getOutputStr();
+  virtual String getOutputStr();
   int index = 0;
   int numberOfEntries = 0;
   MenuEntry *nexts[5];
@@ -82,6 +82,7 @@ class MenuTree
 
 class ProbeEntry : public MenuEntry
 {
+  using MenuEntry::MenuEntry;
   String getOutputStr();
 };
 #endif

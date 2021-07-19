@@ -161,6 +161,7 @@ int Runner::incrementIndex()
 }
 
 int Runner::decrementIndex()
+
 {
 
   if (theCurrent->index == 0)
@@ -171,4 +172,9 @@ int Runner::decrementIndex()
   {
     return theCurrent->index - 1;
   }
+}
+
+String ProbeEntry::getOutputStr()
+{
+  return "Inheritance";
 }
