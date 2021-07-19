@@ -82,6 +82,6 @@ class MenuTree
 
 class ProbeEntry : public MenuEntry
 {
-
+  String getOutputStr();
 };
 #endif

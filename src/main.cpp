@@ -58,6 +58,8 @@ void setup()
   rootDir.addSub(&pidDir);
   rootDir.addSub(&pwmDir);
 
+  rootDir.previous = &rootDir;
+
 
   test.dirBrowser(0);
   interrupts();
@@ -98,9 +100,6 @@ void loop()
     break;
   }
 
-  if (test.waitForInput() == DOWN)
-  {
-  }
 }
 
 ISR(TIMER1_OVF_vect) //16 bit TIMER overflow trigger 256*1/(16*10^10)*(2^16-3036) = 1
